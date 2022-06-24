@@ -1,0 +1,13 @@
+{{#each card}}
+    {{ name }}
+    {{ qty }}
+    <img src="{{{ img }}}">
+    <form method="POST" action="/mine">
+    <input type="hidden" name="_id" value="{{{ _id }}}">
+    <input type="submit" class="collect" value="Put up for trade">
+    <p>{{ message }}</p>
+</form>
+{{/each}}
+
+
+    <p>{{ message }}</p>

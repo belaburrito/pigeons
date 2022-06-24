@@ -1,0 +1,55 @@
+<div id="welcome">
+    <h1><span id="bigPigeon">Pigeons</span> is a collectible playing card game.
+    Collect all 50 pigeons in Manhattan to win a physical pack of cards.</h1>
+
+    <h2 id="about">Who are we?</h2>
+    <p>
+        Pigeons is an interactive digital art experience based on a Pigeon collectible playing card game designed by Elias Juul Reichel and 
+        Edward Crysz during the London COVID lockdown of 2021. The physical deck of cards detail different types of pigeons 
+        (ex., Jesus Pigeon, Hunter Pigeon, Cowboy Pigeon) and their stats.
+    </p>
+
+    <p>
+        
+        Posters of all 50 unique pigeons are posted around the city. Users can scan a QR code and digitally "collect" a playing card.
+        If they collect all 50 cards, they are sent a physical pack of playing cards in the mail. 
+
+    </p>
+
+
+    <h2 id="start">Get started!</h2>
+
+        {{#if user}}
+    <p>
+    Hi {{user.username}}. Let's go collect Pigeons!
+    <form method="POST" action="/">
+        <input type="hidden" name="name" value="Hunter Pigeon">
+        <input type="hidden" name="qty" value="1">
+        <input type="hidden" name="img" value="/img/hunter.png">
+        <input type="hidden" name="_id" value="01">
+        <input type="submit" class="collect" value="Collect this pigeon">
+        <p>{{ message }}</p>
+    </form>
+
+    <img src="/img/hunter.png">
+    </p>
+    {{else}}
+    <a href="/login">Login</a> or <a href="/register">Register</a> to save your pigeon.
+    <br>
+
+    <a href="/mine">My pigeons</a>
+    <form method="POST" action="/">
+        <input type="hidden" name="name" value="Hunter Pigeon">
+        <input type="hidden" name="qty" value="1">
+        <input type="hidden" name="img" value="/img/hunter.png">
+        <input type="hidden" name="_id" value="01">
+        <input type="submit" class="collect" value="Collect this pigeon">
+        <p>{{ message }}</p>
+    </form>
+
+    <img src="/img/hunter.png">
+    {{/if}}
+
+</div>
+
+

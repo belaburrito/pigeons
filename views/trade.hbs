@@ -1,0 +1,19 @@
+<a href="/mine">Click here to go back to your cards.</a>
+<p>Or, enter the username with whom you'd like to trade your card with.</p>
+<form method="POST" action="/trade">
+    <input type="text" name="trader" placeholder="username">
+    <input type="submit" class="collect" value="Submit">
+</form>
+
+{{ message }}
+
+{{#if cards}}
+<p>Click the card you'd like to trade for.</p>
+    {{#each cards}}
+        <form method="POST" action="/success">
+            <input type="hidden" name="_id" value="{{{ _id }}}">
+            <input type="submit" class="collect" value="Request trade">
+            <img src="{{{ img }}}">
+        </form>
+    {{/each}}
+{{/if}}

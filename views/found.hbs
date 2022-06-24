@@ -1,0 +1,10 @@
+<h2>Congrats! You found <b>{{ card.name }}</b></h2>
+<img src="{{{ card.img }}}">
+
+<form method="POST" action="/">
+    <input type="hidden" name="name" value="{{{ card.name }}}">
+    <input type="hidden" name="qty" value="1">
+    <input type="hidden" name="img" value="{{{ card.img }}}">
+    <input type="hidden" name="_id" value="{{{ card._id }}}">
+    <input type="submit" class="collect" value="Collect this pigeon">
+</form>
