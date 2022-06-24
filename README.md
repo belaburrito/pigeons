@@ -6,7 +6,7 @@ Pigeons is an interactive digital art experience based on a Pigeon collectible p
 
 Posters of all 50 unique pigeons are posted around the city. Users can scan a QR code and digitally "collect" a playing card. If they collect all 50 cards, they are sent a physical pack of playing cards in the mail. The concept is similar to Pokemon Go and Geocaching.
 
-Scan the following example QR code:
+(Scan the following example QR code) QR EXPIRED, CHECK BACK SOON!
 ![Dr. Seuss Pigeon](documentation/frame.png)
 
 
